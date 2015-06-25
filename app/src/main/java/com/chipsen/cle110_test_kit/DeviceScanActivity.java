@@ -25,6 +25,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.Vibrator;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -118,10 +119,17 @@ public class DeviceScanActivity extends ListActivity implements TextToSpeech.OnI
     }
 
     private void sayLocation() {
+
+
         String location = "칩센의 비콘에 접근했습니다.";
 ;        mTts.speak(location,
                 TextToSpeech.QUEUE_FLUSH,  // Drop all pending entries in the playback queue.
                 null);
+
+        long[] pattern = MorseCodeConverter.pattern("beacon");
+
+        Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+        vibrator.vibrate(pattern, -1);
     }
 
     @Override
