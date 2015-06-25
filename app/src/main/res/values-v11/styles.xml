@@ -1,0 +1,40 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    -->
+       <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+     
+    </style> 
+    
+  
+
+	<style name="CustomTitle" parent="android:Theme">
+	<item name="android:windowTitleSize">45dp</item>    	
+	<item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+	</style>
+	
+		<style name="CustomTitle1" parent="android:Theme">
+	<item name="android:windowTitleSize">45dp</item>    	
+	<item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+	</style>
+	    
+	<style name="CustomWindowTitleBackground">
+	<item name="android:background">#FFFFFF</item>
+	</style>
+    
+    <style name="MyActionBar" parent="android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+       <item name="android:background">#0084bc</item>
+       <item name="android:titleTextStyle">@style/LineTextStyle</item>
+       <item name="android:icon">@drawable/top_logo</item>
+
+    </style>
+  
+    <style name="LineTextStyle" parent="@android:style/TextAppearance"> 
+	    <item name="android:text"></item>    
+		<item name="android:textSize">20sp</item>  
+		<item name="android:textColor">#FFFFFF</item>  
+	</style>  
+</resources>

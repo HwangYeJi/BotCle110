@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+        <item android:id="@+id/action_term"
+          android:title="change"
+          android:showAsAction="ifRoom"/>
+        <item android:id="@+id/action_change"
+          android:title="change"
+          android:showAsAction="ifRoom"/>
+        
+    <item android:id="@+id/action_bluetooth"
+		android:showAsAction="ifRoom"
+		android:title="@string/action_bluetooth" />
+
+</menu>
+<!-- From: file:/Users/HyoJung/AndroidStudioProjects/BotTestKit/BOT-CLE1X0_Test_Kit_Studio/app/src/main/res/menu/navigation.xml -->

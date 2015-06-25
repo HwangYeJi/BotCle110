@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="chipsen-cle1x0_1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/chipsen-cle1x0_1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

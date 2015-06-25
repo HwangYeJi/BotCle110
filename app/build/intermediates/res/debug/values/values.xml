@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/HyoJung/AndroidStudioProjects/BotTestKit/BOT-CLE1X0_Test_Kit_Studio/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="demo_titles_array">
+		<item>주변장치 제어</item>
+        <item>Terminal</item>       
+        
+        
+    </string-array>
+    <string-array name="device_spinner_array">
+        <item>MSP430G2553</item>
+        <item>MSP430F5529</item>
+    </string-array>
+    <declare-styleable name="EmulatorView"/>
+    <!-- From: file:/Users/HyoJung/AndroidStudioProjects/BotTestKit/BOT-CLE1X0_Test_Kit_Studio/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/Users/HyoJung/AndroidStudioProjects/BotTestKit/BOT-CLE1X0_Test_Kit_Studio/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="VCC_label">VCC</string>
+    <string name="VCC_value_default">0.0V</string>
+    <string name="V_battery_label">Battery Voltage</string>
+    <string name="V_battery_value_default">0.0V</string>
+    <string name="action_bluetooth">Connect Device</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name"/>
+    <string name="app_name2">BOT-CLE_110 Kit</string>
+    <string name="ble_not_supported">BLE가 연결되지 않았습니다.</string>
+    <string name="button_count_default">0</string>
+    <string name="button_count_label">Times Pressed</string>
+    <string name="clear_button">Clear</string>
+    <string name="data_label">Data</string>
+    <string name="drawer_close">닫기</string>
+    <string name="drawer_open">열기</string>
+    <string name="error_bluetooth_not_supported">블루투수가 제공되지 않는 OS버전입니다.</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hex_label">Hex</string>
+    <string name="hex_send_hint">0x00 0x01 0x02 0xFF</string>
+    <string name="home_text">Anrich 디밍제어!</string>
+    <string name="menu_run">BLE 스캔 계속</string>
+    <string name="menu_scan">BLE 스캔</string>
+    <string name="menu_stop">BLE 스캔 중지</string>
+    <string name="send_button_text">Send</string>
+    <string name="string_label">String</string>
+    <string name="string_send_hint">Hello World!</string>
+    <string name="temperature_label">Temperature</string>
+    <string name="temperature_value_default">0°F</string>
+    <string name="title_devices">BLE 장치 스캔</string>
+    <string name="toggle_button">Toggle</string>
+    <string name="unknown_device">알 수 없는 장치</string>
+    <string name="update_button_text">Update</string>
+    <!-- From: file:/Users/HyoJung/AndroidStudioProjects/BotTestKit/BOT-CLE1X0_Test_Kit_Studio/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>

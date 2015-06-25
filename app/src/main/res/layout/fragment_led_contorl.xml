@@ -1,0 +1,536 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".RotaryKnobView" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout_test_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/imageView_test_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1.5"
+                android:src="@drawable/test_uart_off" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1.5"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/imageView_test_in_uart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/uart_off" />
+
+                <ImageView
+                    android:id="@+id/imageView_test_ex_uart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ex_uart_off" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/title_pio" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gpio"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:background="@drawable/gpio_bottom"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/gpio_pio10" />
+
+                    <ImageView
+                        android:id="@+id/imageView_pio10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/gpio_in" />
+
+                    <Button
+                        android:id="@+id/button1"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/gpio_low_off" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/gpio_pio11" />
+
+                    <ImageView
+                        android:id="@+id/imageView_pio11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/gpio_in" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/gpio_low_off" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TextView03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/analog"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/analog_bottom"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/linearlayout_text"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imageView_AIO0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:src="@drawable/analog_temperature_small" />
+
+                    <TextView
+                        android:id="@+id/textView_AIO0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0˚"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imageView_AIO1"
+						android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:src="@drawable/analog_light_small" />
+
+                    <TextView
+                        android:id="@+id/textView_AIO1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0%"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imageView_AIO2"
+                       android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:src="@drawable/analog_resistance_small" />
+              
+                    <TextView
+                        android:id="@+id/textView_AIO2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0㏀"                        android:textSize="20sp" />
+                    
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pwm"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="0dp"
+         android:layout_marginBottom="0dp"
+         android:layout_weight="5"
+         android:background="@drawable/motor_bottom"
+         android:orientation="vertical" >
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_weight="0.1"
+             android:orientation="vertical" >
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_marginBottom="20dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="8dp"
+                 android:layout_weight="0.1"
+                 android:orientation="vertical" >
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:orientation="horizontal" >
+
+                     <ImageView
+                         android:id="@+id/imageView_r_min"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginLeft="5dp"
+                         android:layout_weight="0.85"
+                         android:src="@drawable/motor_r_min" />
+
+                     <SeekBar
+                         android:id="@+id/seekBar_PWM0"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_weight="0.2"
+                         android:max="255"
+                         android:progress="0"
+                         android:progressDrawable="@drawable/seekbar_progress"
+                         android:secondaryProgress="0" />
+
+                     <ImageView
+                         android:id="@+id/imageView_r_max"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginRight="5dp"
+                         android:layout_weight="0.85"
+                         android:src="@drawable/motor_r_max" />
+
+                     <TextView
+                         android:id="@+id/textView_PWM0"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_weight="0.85"
+                         android:gravity="center"
+                         android:text="0"
+                         android:visibility="gone" />
+
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:orientation="horizontal" >
+
+                     <ImageView
+                         android:id="@+id/imageView_g_min"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginLeft="5dp"
+                         android:layout_weight="0.85"
+                         android:src="@drawable/motor_g_min" />
+
+                     <SeekBar
+                         android:id="@+id/seekBar_PWM1"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_weight="0.2"
+                         android:max="255"
+                         android:progress="0"
+                         android:progressDrawable="@drawable/seekbar_progress"
+                         android:secondaryProgress="0" />
+
+                     <ImageView
+                         android:id="@+id/imageView_g_max"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginRight="5dp"
+                         android:layout_weight="0.85"
+                         android:src="@drawable/motor_g_max" />
+
+                     <TextView
+                         android:id="@+id/textView_PWM1"
+                         android:layout_width="match_parent"
+                         android:layout_height="fill_parent"
+                         android:layout_weight="0.85"
+                         android:gravity="center"
+                         android:visibility="gone"
+                         android:text="0" />
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:orientation="horizontal" >
+
+                     <ImageView
+                         android:id="@+id/imageView_b_min"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginLeft="5dp"
+                         android:layout_weight="0.85"
+                         android:src="@drawable/motor_b_min" />
+
+                     <SeekBar
+                         android:id="@+id/seekBar_PWM2"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_weight="0.2"
+                         android:max="255"
+                         android:progress="0"
+                         android:progressDrawable="@drawable/seekbar_progress"
+                         android:secondaryProgress="0" />
+
+                     <ImageView
+                         android:id="@+id/imageView_b_max"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginRight="5dp"
+                         android:layout_weight="0.85"
+                         android:src="@drawable/motor_b_max" />
+
+                     <TextView
+                         android:id="@+id/textView_PWM2"
+                         android:layout_width="match_parent"
+                         android:layout_height="fill_parent"
+                         android:layout_weight="0.85"
+                         android:gravity="center"
+                         android:visibility="gone"
+                         android:text="0" />
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:orientation="horizontal" >
+
+                     <ImageView
+                         android:id="@+id/imageView_m_min"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginLeft="5dp"
+                         android:layout_weight="0.85"
+                         android:src="@drawable/motor_m_min" />
+
+                     <SeekBar
+                         android:id="@+id/seekBar_PWM3"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_weight="0.2"
+                         android:max="255"
+                         android:progress="0"
+                         android:progressDrawable="@drawable/seekbar_progress"
+                         android:secondaryProgress="0" />
+
+                     <ImageView
+                         android:id="@+id/imageView_m_max"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginRight="5dp"
+                         android:layout_weight="0.85"
+                         android:src="@drawable/motor_m_max" />
+
+                     <TextView
+                         android:id="@+id/textView_PWM3"
+                         android:layout_width="match_parent"
+                         android:layout_height="fill_parent"
+                         android:layout_weight="0.85"
+                         android:gravity="center"
+                         android:visibility="gone"
+                         android:text="0" />
+                 </LinearLayout>
+             </LinearLayout>
+
+         </LinearLayout>
+
+     </LinearLayout>
+      
+    </LinearLayout>
+
+</LinearLayout>

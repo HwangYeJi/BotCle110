@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/HyoJung/AndroidStudioProjects/BotTestKit/BOT-CLE1X0_Test_Kit_Studio/app/src/main/res/values-v11/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+     
+    </style>
+    <style name="CustomTitle" parent="android:Theme">
+	<item name="android:windowTitleSize">45dp</item>    	
+	<item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+	</style>
+    <style name="CustomTitle1" parent="android:Theme">
+	<item name="android:windowTitleSize">45dp</item>    	
+	<item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+	</style>
+    <style name="CustomWindowTitleBackground">
+	<item name="android:background">#FFFFFF</item>
+	</style>
+    <style name="LineTextStyle" parent="@android:style/TextAppearance"> 
+	    <item name="android:text"/>    
+		<item name="android:textSize">20sp</item>  
+		<item name="android:textColor">#FFFFFF</item>  
+	</style>
+    <style name="MyActionBar" parent="android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+       <item name="android:background">#0084bc</item>
+       <item name="android:titleTextStyle">@style/LineTextStyle</item>
+       <item name="android:icon">@drawable/top_logo</item>
+
+    </style>
+</resources>

@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RotaryKnobView" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+         android:background="#FFFFFF"
+        android:id="@+id/linearloayout_title" >
+
+        <ImageView
+            android:id="@+id/imageView_setting"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:src="@drawable/title_m" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/title_t" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.5"
+        android:orientation="vertical" >
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="10"
+           android:orientation="vertical" >
+
+	            <com.chipsen.cle110_test_kit.EmulatorView
+	                android:id="@+id/emulatorView"
+	                android:layout_width="match_parent"
+	                android:layout_height="fill_parent"
+	                android:layout_alignParentLeft="true" />
+	            
+	 	</LinearLayout>
+
+          <LinearLayout
+              android:id="@+id/linearLayoutedit1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="bottom"
+              android:layout_weight="0.1"
+              android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:lines="1"
+                android:maxLength="19"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="false" />
+
+            <Button
+                android:id="@+id/button1"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send" 
+                 android:layout_weight="1"/>
+
+        </LinearLayout>
+        
+
+    </LinearLayout>
+ 
+</LinearLayout><!-- From: file:/Users/HyoJung/AndroidStudioProjects/BotTestKit/BOT-CLE1X0_Test_Kit_Studio/app/src/main/res/layout/term_activity.xml -->

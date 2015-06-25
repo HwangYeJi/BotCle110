@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  <저작권>
+본 프로그램 및 소스코드는 (주)칩센의 저작물입니다.
+본 프로그램 및 소스코드는 (주)칩센의 블루투스 제품을 구입한 고객에게 제공되는 것 입니다.
+당사의 블루투스 제품을 활용할 목적 이외의 용도로 사용하는 것을 금지합니다.
+
+<License>
+The program or internal source codes was created by CHIPSEN Co.,Ltd.
+In order to use the program or internal source codes, you must buy CHIPSEN's Bluetooth products.
+You are not allowed to use it for purposes other than CHIPSEN's Bluetooth Products
+
+Copyright 2015. CHIPSEN all rights reserved.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chipsen.cle110_test_kit"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="18" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- CPU ON/OFF,Screen ON/OFF,Keyboard ON/OFF -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ico_144"
+        android:label="@string/app_name2"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppBaseTheme" >
+        <activity
+            android:name="com.chipsen.cle110_test_kit.NavigationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitle" >
+        </activity>
+        <activity
+            android:name="com.chipsen.cle110_test_kit.DeviceScanActivity"
+            android:label="@string/title_devices"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitle1" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chipsen.cle110_test_kit.NavigationActivity" />
+        </activity>
+        <activity
+            android:name="com.chipsen.cle110_test_kit.chipsen_logo"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.chipsen.bleservice.BluetoothLeService" />
+    </application>
+
+</manifest>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/HyoJung/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/Users/HyoJung/AndroidStudioProjects/BotTestKit/BOT-CLE1X0_Test_Kit_Studio/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-9bc0d29ea2e8bb043ff3dddb2dca66311052b3dd.jar" />
+    </item>
+    <item
+        jar="/Users/HyoJung/AndroidStudioProjects/BotTestKit/BOT-CLE1X0_Test_Kit_Studio/app/libs/chipsen-cle1x0_1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bac0b1904c501e012988307745df1a89cc41d28a">
+        <dex dex="/Users/HyoJung/AndroidStudioProjects/BotTestKit/BOT-CLE1X0_Test_Kit_Studio/app/build/intermediates/pre-dexed/debug/chipsen-cle1x0_1-4094fcf46bfdb9d8408877b78908c1c2cc4d2df4.jar" />
+    </item>
+    <item
+        jar="/Users/HyoJung/AndroidStudioProjects/BotTestKit/BOT-CLE1X0_Test_Kit_Studio/app/libs/GifView.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5a518235931001b94e87540c99bd13258f614622">
+        <dex dex="/Users/HyoJung/AndroidStudioProjects/BotTestKit/BOT-CLE1X0_Test_Kit_Studio/app/build/intermediates/pre-dexed/debug/GifView-e9b0705db48d89b20f62ad37a27a56162b3fdd15.jar" />
+    </item>
+
+</items>
