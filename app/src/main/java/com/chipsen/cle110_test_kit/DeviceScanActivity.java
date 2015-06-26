@@ -88,6 +88,16 @@ public class DeviceScanActivity extends ListActivity implements TextToSpeech.OnI
 
     private TextToSpeech mTts;
     private boolean sayingLocation = false;
+    private String temperatureString = "";
+
+    //온도
+    double temp_fix[]={1.5614f,1.5345f,1.5061f,1.4759f,1.4438f,1.4096f,1.3821f,1.3532f,1.3227f,1.2906f,1.2567f,1.2293f,
+            1.2006f,1.1707f,1.1393f,1.1071f,1.0808f,1.0536f,1.0252f,0.9957f,0.965f,0.9403f,0.9149f,0.8886f,0.8614f,0.8333f,
+            0.8108f,0.7876f,0.7637f,0.7392f,0.714f,0.6938f,0.6731f,0.652f,0.6303f,0.6081f,0.5903f,0.5672f,0.5435f,0.5192f,
+            0.5155f,0.5f,0.4843f,0.4683f,0.4521f,0.4356f,0.4223f,0.4088f,0.3951f,0.3813f,0.3673f,0.3559f,0.3445f,0.3329f,
+            0.3212f,0.3094f,0.2998f,0.2902f,0.2804f,0.2706f,0.2607f,0.2526f,0.2445f,0.2363f,0.228f,0.2197f,0.2129f,0.2061f,
+            0.1992f,0.1992f,0.1854f,0.1797f,0.174f,0.1682f,0.1625f,0.1567f,0.1519f,0.1471f,0.1423f,0.1375f,0.1327f,0.1287f,
+            0.1247f,0.1207f,0.1167f,0.1127f,0.1093f,0.106f,0.1026f,0.0992f,0.0958f};
 
 
     // Implements TextToSpeech.OnInitListener.
@@ -130,6 +140,18 @@ public class DeviceScanActivity extends ListActivity implements TextToSpeech.OnI
 
         Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(pattern, -1);
+    }
+
+    private void sayTemperature() {
+
+          mTts.speak("현재 온도는 " + temperatureString + "도 입니다.",
+                TextToSpeech.QUEUE_FLUSH,  // Drop all pending entries in the playback queue.
+                null);
+
+        //long[] pattern = MorseCodeConverter.pattern("beacon");
+
+        //Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+        //vibrator.vibrate(pattern, -1);
     }
 
     @Override
@@ -229,37 +251,37 @@ public class DeviceScanActivity extends ListActivity implements TextToSpeech.OnI
 
 	     // 검색을 계속함...
 		 imageView_search_infinity.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					// 스캐닝중인가? 아니면...
-					if(!mScanning_run){
-	            		
-	            		scanLeDevice(false);
-	            		gf1.showAnimation();
 
-                        // 스캐닝을 켠다
-	            		mScanning_run = true;
+             @Override
+             public void onClick(View v) {
+                 // 스캐닝중인가? 아니면...
+                 if (!mScanning_run) {
 
-                        // 핸들러에게 메세지를 보냄...0으로 스캔을 시작하도록함...
-	            		mscaneHandler.sendEmptyMessageDelayed(0, 100);
+                     scanLeDevice(false);
+                     gf1.showAnimation();
 
-	            		imageView_search_infinity.setImageResource(R.drawable.search_l_ing);
+                     // 스캐닝을 켠다
+                     mScanning_run = true;
 
-	            	} else {
-	            	    // 커버로 이미지 변경
-	            		gf1.showCover();
+                     // 핸들러에게 메세지를 보냄...0으로 스캔을 시작하도록함...
+                     mscaneHandler.sendEmptyMessageDelayed(0, 100);
 
-                        // 스캐닝을 끈다
-	                    mScanning_run = false;
+                     imageView_search_infinity.setImageResource(R.drawable.search_l_ing);
 
-                        // 스캔 메세지를 제거함...
-	            		mscaneHandler.sendEmptyMessageDelayed(2, 100);
+                 } else {
+                     // 커버로 이미지 변경
+                     gf1.showCover();
 
-	            		imageView_search_infinity.setImageResource(R.drawable.search_l);
-	            	}
-				}
-			});
+                     // 스캐닝을 끈다
+                     mScanning_run = false;
+
+                     // 스캔 메세지를 제거함...
+                     mscaneHandler.sendEmptyMessageDelayed(2, 100);
+
+                     imageView_search_infinity.setImageResource(R.drawable.search_l);
+                 }
+             }
+         });
 
 	}
     
@@ -453,6 +475,26 @@ public class DeviceScanActivity extends ListActivity implements TextToSpeech.OnI
     	}
     };
 
+
+    String AIO_0_temp(double volt) { //온도 센서 표시
+
+
+        for (int i = 0; i <= temp_fix.length-2; i++) {
+
+            if((temp_fix[i]>=volt)&(volt>=temp_fix[i+1])){
+                double temp0 = temp_fix[i]-temp_fix[i+1];
+                double temp1 = temp_fix[i]-volt;
+                double temp2 =  temp1/temp0*10;
+                int tempint = (int)temp2;
+                // mtextView_AIO0.setText(i+"."+tempint+"˚");
+                // set_data= "AIO "+data.substring(0, 1)+": "+aio_vl+"V";
+                return i+"."+tempint+"˚";
+                // break;
+            }
+        }
+
+        return "";
+    }
     
 
     // Adapter for holding devices found through scanning.
@@ -538,6 +580,7 @@ public class DeviceScanActivity extends ListActivity implements TextToSpeech.OnI
             else{
                 viewHolder.deviceName.setText(R.string.unknown_device);
             }
+
             Log.d(TAG, "Dbg__ DeviceScan =1 ");
             	viewHolder.deviceAddress.setText(device.getAddress());	//?????? ???
             	byte[] array_byte=mBLE_Device.user_alldata[i].getBytes();
@@ -606,8 +649,9 @@ public class DeviceScanActivity extends ListActivity implements TextToSpeech.OnI
 
 
                 if(mBLE_Device.rssi[i]+99 > 50 && sayingLocation == false) {
-                    sayingLocation = true;
-                    sayLocation();
+                    // sayingLocation = true;
+                    // sayLocation();
+                    // sayTemperature();
                     Toast.makeText(DeviceScanActivity.this, "접근", Toast.LENGTH_SHORT).show();
                 }
 
@@ -619,7 +663,7 @@ public class DeviceScanActivity extends ListActivity implements TextToSpeech.OnI
             	viewHolder.textView_user_value.setText("");
             	viewHolder.imageView_pio10.setImageResource(R.drawable.pio10_off);	
             	viewHolder.imageView_pio11.setImageResource(R.drawable.pio11_off);
-            	viewHolder.linearLayout_user_value.setVisibility(view.GONE);
+            	//viewHolder.linearLayout_user_value.setVisibility(view.GONE);
             	 try{
             	String data = mBLE_Device.user_data[i];
             	
@@ -629,17 +673,21 @@ public class DeviceScanActivity extends ListActivity implements TextToSpeech.OnI
 // user data?? ??? ?? ?о? ???? ?з? ???            	
                	if((data.substring(0, 1).equals("0"))|(data.substring(0, 1).equals("1"))|(data.substring(0, 1).equals("2"))|(data.substring(0, 1).equals("N"))){
                		viewHolder.linearLayout_user_value.setVisibility(view.VISIBLE);
+
                		if((data.substring(0, 1).equals("0"))|(data.substring(0, 1).equals("1"))|(data.substring(0, 1).equals("2"))){ //AIO ?з?
                			if(!(data.substring(1, 5).equals("0000"))){
                			byte[] bytes = new java.math.BigInteger(data.substring(1, 5), 16).toByteArray();
                			
-               			String aio_vl=String.format("%.3f" , byte2Int(bytes)*0.001);
-               	
+               			String aio_vl=String.format("%.3f", byte2Int(bytes) * 0.001);
+
+
                			
-               			set_data= "AIO "+data.substring(0, 1)+": "+aio_vl+"V";
+               			//set_data= "AIO "+data.substring(0, 1)+": "+aio_vl+"V";
+                            set_data = AIO_0_temp(byte2Int(bytes) * 0.001);
+                            temperatureString = set_data;
                			
                			viewHolder.progressBar_user_value.setProgress((byte2Int(bytes)));
-               			}else{
+               			} else {
                				set_data= "AIO "+data.substring(0, 1)+": 0.000V";
                			}
                		}
@@ -647,12 +695,26 @@ public class DeviceScanActivity extends ListActivity implements TextToSpeech.OnI
                		               		
                		if((data.substring(5, 6).equals("H"))|(data.substring(5, 6).equals("L"))){ // PIO?з?
                			if(data.substring(5, 6).equals("H")){
-               				viewHolder.imageView_pio10.setImageResource(R.drawable.pio10_on);	
+
+               				viewHolder.imageView_pio10.setImageResource(R.drawable.pio10_on);
+
+                            if(sayingLocation == false) {
+                                sayingLocation = true;
+                                sayTemperature();
+
+                            }
+
                			}else{
                				viewHolder.imageView_pio10.setImageResource(R.drawable.pio10_off);
                			}
+
                			if(data.substring(6, 7).equals("H")){
-               				viewHolder.imageView_pio11.setImageResource(R.drawable.pio11_on);	
+               				viewHolder.imageView_pio11.setImageResource(R.drawable.pio11_on);
+                            if(sayingLocation == false) {
+                                sayingLocation = true;
+                                sayTemperature();
+
+                            }
                			}else{
                				viewHolder.imageView_pio11.setImageResource(R.drawable.pio11_off);
                			}
