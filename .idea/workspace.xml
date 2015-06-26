@@ -10,28 +10,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20a9ebaa-7445-4b21-b3f5-d69c5b7a2425" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$5$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$5$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$BLE_Device.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$BLE_Device.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$LeDeviceListAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$LeDeviceListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chipsen/cle110_test_kit/DeviceScanActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/chipsen/cle110_test_kit/DeviceScanActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/chipsen/cle110_test_kit/DeviceScanActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="20a9ebaa-7445-4b21-b3f5-d69c5b7a2425" name="Default" comment="" />
     <ignored path="BOT-CLE1X0_Test_Kit_Studio.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
