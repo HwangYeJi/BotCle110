@@ -312,6 +312,7 @@ public class DeviceScanActivity extends ListActivity implements TextToSpeech.OnI
             mTts.stop();
             mTts.shutdown();
         }
+
 		super.onDestroy();
 	}
 
