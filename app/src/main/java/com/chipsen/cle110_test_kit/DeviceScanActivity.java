@@ -649,9 +649,9 @@ public class DeviceScanActivity extends ListActivity implements TextToSpeech.OnI
 
 
                 if(mBLE_Device.rssi[i]+99 > 50 && sayingLocation == false) {
-                    // sayingLocation = true;
+                    sayingLocation = true;
                     // sayLocation();
-                    // sayTemperature();
+                    sayTemperature();
                     Toast.makeText(DeviceScanActivity.this, "접근", Toast.LENGTH_SHORT).show();
                 }
 
